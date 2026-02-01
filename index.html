@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Cute Photobooth 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="desktop-warning">📱 Buka di HP / Tablet</div>
+
+<div class="app">
+  <h1>💗 Cute Photobooth 💗</h1>
+
+  <div class="camera-box" id="stage">
+    <video id="video" autoplay playsinline></video>
+    <img id="frame" class="frame">
+  </div>
+
+  <canvas id="canvas" hidden></canvas>
+
+  <div class="controls">
+    <button onclick="toggleMirror()">🪞</button>
+    <button onclick="startTimer(3)">⏱3</button>
+    <button onclick="startTimer(5)">⏱5</button>
+    <button onclick="takeShot()">📸</button>
+    <button onclick="download()">⬇</button>
+  </div>
+
+  <h3>📐 Layout</h3>
+  <div class="options">
+    <button onclick="selectLayout('grid3x2')">3×2</button>
+    <button onclick="selectLayout('strip3')">Strip</button>
+  </div>
+
+  <h3>🎀 Frame</h3>
+  <div class="options">
+    <img src="frames/frame-grid3x2.png" onclick="setFrame(this.src)">
+    <img src="frames/frame-strip3.png" onclick="setFrame(this.src)">
+  </div>
+
+  <h3>✨ Stiker</h3>
+  <div class="options">
+    <img src="stickers/heart.png" onclick="addSticker(this.src)">
+    <img src="stickers/star.png" onclick="addSticker(this.src)">
+    <img src="stickers/smile.png" onclick="addSticker(this.src)">
+  </div>
+
+  <img id="result" class="result">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
